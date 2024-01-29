@@ -1,14 +1,16 @@
 import {NavBar} from './components/NavBar/NavBar.jsx'
 import {ItemListContainer} from './components/ItemListContainer/ItemListContainer.jsx'
-//import './App.css'
+import './baseStyle.css'
 
 const App = () => {
   return (
     <>
-      <div>
-        <NavBar/>
-        <ItemListContainer greeting={'Bienvenidos a la tienda'}/>
-      </div>
+        <header>
+          <NavBar/>
+        </header>
+        <main>
+          <ItemListContainer greeting={'Bienvenidos a la tienda'}/>
+        </main>
     </>
   )
 }

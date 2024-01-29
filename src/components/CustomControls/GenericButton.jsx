@@ -1,6 +1,7 @@
 export const GenericButton = ({label, color}) =>  {
   const buttonStyle = {
-    color: color
+    color: color,
+    backgroundColor: 'black'
   };
 
   return (

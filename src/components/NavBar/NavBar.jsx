@@ -1,27 +1,18 @@
 import {CartWidget} from '../CartWidget/CartWidget'
 import {GenericButton} from '../CustomControls/GenericButton'
+import logo from '../../assets/logo.svg'
 import './NavBarStyle.css'
 
 export const NavBar = () =>  {
   return (
     <>
+      <img src={logo} alt='Logo' width="32" height="32"/>
       <div>
-        <table>
-          <tbody>
-            <tr>
-              <td><h2 className='subTitle'>Mi Tiend@</h2></td>
-              <td>
-                <div>
-                  <GenericButton label={'Notebooks'} color={'blue'} />
-                  <GenericButton label={'Impresoras'} color={'red'} />
-                  <GenericButton label={'Tablets'} color={'purple'} />
-                </div>
-              </td>
-              <td><CartWidget/></td>
-            </tr>
-          </tbody>
-        </table>
+        <GenericButton label={'Guitarras'} color={'gray'} />
+        <GenericButton label={'Amplificadores'} color={'red'} />
+        <GenericButton label={'Pedales'} color={'gray'} />
       </div>
+      <CartWidget/>
     </>
   )
 }
