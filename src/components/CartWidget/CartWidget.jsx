@@ -1,11 +1,11 @@
 import cart from '../../assets/CartWidgetImg.svg'
 
-export const CartWidget = () =>  {
+export const CartWidget = ({qty}) =>  {
   return (
     <>
         <div>
             <img src={cart} alt='CartWidget' width="32" height="32"/>
-            0
+            <strong>{qty}</strong>
         </div>
     </>
 )

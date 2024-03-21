@@ -1,17 +1,19 @@
-import {NavBar} from './components/NavBar/NavBar.jsx'
-import {ItemListContainer} from './components/ItemListContainer/ItemListContainer.jsx'
+import {BrowserRouter, Route, Routes} from "react-router-dom"
+import { NavBar, Cart, ItemListContainer, ItemDetailContainer} from './components'
 import './baseStyle.css'
 
 const App = () => {
   return (
-    <>
-        <header>
-          <NavBar/>
-        </header>
-        <main>
-          <ItemListContainer greeting={'Bienvenidos a la tienda'}/>
-        </main>
-    </>
+        <BrowserRouter>
+            <NavBar />
+          <Routes>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/category/:categoryId" element={<ItemListContainer />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+            <Route path="*" element={<h1>Error 404 - NOT FOUND</h1>} />
+          </Routes>
+        </BrowserRouter>
   )
 }
 
